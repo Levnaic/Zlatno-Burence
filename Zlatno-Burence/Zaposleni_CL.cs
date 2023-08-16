@@ -43,6 +43,7 @@ namespace Zlatno_Burence
         //konekcioni string
         private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\ZlatnoBurence.mdf;Integrated Security=True";
 
+        //funkcije za manipulisanje bazom
         public void dodajZaposlenog()
         {
             try
@@ -64,7 +65,21 @@ namespace Zlatno_Burence
             }
         }
 
-        //funkcije za manipulisanje bazom
+        public void azurirajZaposlenog() 
+        {
+            string updateSql = "UPDATE Zaposleni " + "SET ImeZaposlenog= @Ime, PrezimeZaposlenog=@Prezime " + "WHERE Id = @Id;";
+            using (SqlConnection connection = new SqlConnection(_connectionString)) 
+            {
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = updateSql;
+                command.Parameters.Add(new SqlParameter("@Id", ID));
+                command.Parameters.Add(new SqlParameter("@Ime", Ime));
+                command.Parameters.Add(new SqlParameter("@Prezime", Prezime));
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
         public void obrisiZaposlenog() 
         {
             try

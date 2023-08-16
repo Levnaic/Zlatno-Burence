@@ -139,5 +139,28 @@ namespace Zlatno_Burence
 
         }
 
+        private void azurirajBtn_Click(object sender, EventArgs e)
+        {
+            if (ZaposleniDg.SelectedRows.Count> 0) 
+            {
+                int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
+                Zaposleni_CL selektovaniZaposleni = zaposleniList.Where(x=> x.ID == idSelektovanog).FirstOrDefault();
+
+                if (selektovaniZaposleni!= null) 
+                {
+                    selektovaniZaposleni.Ime = imeZapTxt.Text;
+                    selektovaniZaposleni.Prezime = PrezZapTxt.Text;
+                    selektovaniZaposleni.azurirajZaposlenog();
+                    indeksSelektovanog = ZaposleniDg.SelectedRows[0].Index;
+
+                    prikazZaposlenigDGV();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Nema podataka ili ni jedan red nije odabran!");
+            }
+        }
     }
 }

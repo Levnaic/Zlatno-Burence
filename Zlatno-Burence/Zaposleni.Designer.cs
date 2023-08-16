@@ -39,6 +39,7 @@
             this.dodajZapBtn = new System.Windows.Forms.Button();
             this.ZaposleniDg = new System.Windows.Forms.DataGridView();
             this.obrisiBtn = new System.Windows.Forms.Button();
+            this.azurirajBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniDg)).BeginInit();
             this.SuspendLayout();
@@ -139,11 +140,22 @@
             this.obrisiBtn.UseVisualStyleBackColor = true;
             this.obrisiBtn.Click += new System.EventHandler(this.obrisiBtn_Click);
             // 
+            // azurirajBtn
+            // 
+            this.azurirajBtn.Location = new System.Drawing.Point(389, 272);
+            this.azurirajBtn.Name = "azurirajBtn";
+            this.azurirajBtn.Size = new System.Drawing.Size(75, 23);
+            this.azurirajBtn.TabIndex = 10;
+            this.azurirajBtn.Text = "Azuriraj";
+            this.azurirajBtn.UseVisualStyleBackColor = true;
+            this.azurirajBtn.Click += new System.EventHandler(this.azurirajBtn_Click);
+            // 
             // Zaposleni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.azurirajBtn);
             this.Controls.Add(this.obrisiBtn);
             this.Controls.Add(this.ZaposleniDg);
             this.Controls.Add(this.dodajZapBtn);
@@ -176,5 +188,6 @@
         private Button dodajZapBtn;
         private DataGridView ZaposleniDg;
         private Button obrisiBtn;
+        private Button azurirajBtn;
     }
 }
