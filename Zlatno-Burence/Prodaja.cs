@@ -7,11 +7,12 @@ namespace Zlatno_Burence
             InitializeComponent();
         }
 
+        //-funkcije za prebacivanje formi
         private void nabavkaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Nabavka frmNabavka = new Nabavka();
-            frmNabavka.ShowDialog();
+            frmNabavka.Show();
         
         }
 
@@ -19,7 +20,12 @@ namespace Zlatno_Burence
         {
             this.Hide();
             Zaposleni frmZaposleni = new Zaposleni(); ;
-            frmZaposleni.ShowDialog();
+            frmZaposleni.Show();
+        }
+
+        private void Prodaja_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

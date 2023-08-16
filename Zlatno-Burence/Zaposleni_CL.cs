@@ -40,7 +40,7 @@ namespace Zlatno_Burence
             }
         }
 
-        //konekcioni string i funkcije sa bazom
+        //konekcioni string
         private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\ZlatnoBurence.mdf;Integrated Security=True";
 
         public void dodajZaposlenog()
@@ -59,6 +59,28 @@ namespace Zlatno_Burence
                 }
             }
             catch(Exception ex) 
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //funkcije za manipulisanje bazom
+        public void obrisiZaposlenog() 
+        {
+            try
+            {
+                string deleteSql = "DELETE FROM Zaposleni WHERE Id = @Id;";
+                using (SqlConnection connection = new SqlConnection(_connectionString)) 
+                {
+                    SqlCommand command = connection.CreateCommand();
+                    command.CommandText = deleteSql;
+                    command.Parameters.Add(new SqlParameter("@Id", ID));
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

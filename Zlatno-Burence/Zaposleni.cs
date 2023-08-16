@@ -12,6 +12,7 @@ namespace Zlatno_Burence
 {
     public partial class Zaposleni : Form
     {
+        //Promenjive
         List<Zaposleni_CL> zaposleniList = new List<Zaposleni_CL>();
         int indeksSelektovanog = 1;
 
@@ -21,21 +22,38 @@ namespace Zlatno_Burence
         {
             InitializeComponent();
 
-            ZaposleniDg.AllowUserToAddRows= false;
-            ZaposleniDg.AllowUserToDeleteRows= false;
-            ZaposleniDg.ReadOnly= true;
-            ZaposleniDg.AutoGenerateColumns= false;
+            //inicijalizacija komponenti
+            ZaposleniDg.AllowUserToAddRows = false;
+            ZaposleniDg.AllowUserToDeleteRows = false;
+            ZaposleniDg.ReadOnly = true;
+            ZaposleniDg.AutoGenerateColumns = false;
             ZaposleniDg.Columns.Add("ID", "ID");
-            ZaposleniDg.Columns["ID"].Visible= false;
+            ZaposleniDg.Columns["ID"].Visible = false;
             ZaposleniDg.Columns.Add("ime", "Ime");
             ZaposleniDg.Columns.Add("prezime", "Prezime");
+
+            prikazZaposlenigDGV();
         }
 
-        private void prikazZaposlenigDGV() 
+        //Funkcije
+
+        private void prikaziZaposlenogTxt() 
+        {
+            int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
+            Zaposleni_CL selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
+            if (selektovaniZaposleni!= null )
+            {
+                imeZapTxt.Text = selektovaniZaposleni.Ime;
+                PrezZapTxt.Text = selektovaniZaposleni.Prezime;
+            }
+        }
+
+
+        private void prikazZaposlenigDGV()
         {
             zaposleniList = new Zaposleni_CL().ucitajZaposlene();
             ZaposleniDg.Rows.Clear();
-            for (int i = 0; i < zaposleniList.Count; i++) 
+            for (int i = 0; i < zaposleniList.Count; i++)
             {
                 ZaposleniDg.Rows.Add();
                 ZaposleniDg.Rows[i].Cells["ID"].Value = zaposleniList[i].ID;
@@ -44,24 +62,33 @@ namespace Zlatno_Burence
 
             }
 
-            ZaposleniDg.CurrentCell= null;
+            ZaposleniDg.CurrentCell = null;
+
+            if (zaposleniList.Count > 0) 
+            {
+                if (indeksSelektovanog != -1) ZaposleniDg.Rows[indeksSelektovanog].Selected = true;
+                else ZaposleniDg.Rows[0].Selected = true;
+                prikaziZaposlenogTxt();
+            }
         }
 
+        //-funkcije za prebacivanje formi
         private void nabavkaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Nabavka frmNabavka = new Nabavka();
-            frmNabavka.ShowDialog();
+            frmNabavka.Show();
 
         }
 
         private void prodajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Prodaja frmProdaja = new Prodaja(); ;
-            frmProdaja.ShowDialog();
+            frmProdaja.Show();
         }
 
+        //-funkcije za dugmad
         private void dodajZapBtn_Click(object sender, EventArgs e)
         {
             Zaposleni_CL zap = new Zaposleni_CL();
@@ -69,12 +96,46 @@ namespace Zlatno_Burence
             zap.Prezime = PrezZapTxt.Text;
             zap.dodajZaposlenog();
             indeksSelektovanog = ZaposleniDg.Rows.Count;
+            prikazZaposlenigDGV();
 
         }
 
         private void Zaposleni_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void obrisiBtn_Click(object sender, EventArgs e)
+        {
+            if (ZaposleniDg.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("Da li zelite da obrisete odabranog studenta?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
+                    Zaposleni_CL selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
+                    if (selektovaniZaposleni != null) 
+                    {
+                        selektovaniZaposleni.obrisiZaposlenog();
+                    }
+
+                    indeksSelektovanog = -1;
+                    prikazZaposlenigDGV();
+                } 
+                else 
+                {
+                    MessageBox.Show("Nema podataka ili ni jedan red nije odabran!");
+                }
+            }
+        }
+
+        //-funkcije za dg
+        private void ZaposleniDg_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (ZaposleniDg.CurrentRow != null)
+            {
+                ZaposleniDg.Rows[ZaposleniDg.CurrentRow.Index].Selected = true;
+                prikaziZaposlenogTxt();
+            }
         }
     }
 }

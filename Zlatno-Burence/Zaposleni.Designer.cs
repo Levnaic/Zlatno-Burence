@@ -38,6 +38,7 @@
             this.PrezZapTxt = new System.Windows.Forms.TextBox();
             this.dodajZapBtn = new System.Windows.Forms.Button();
             this.ZaposleniDg = new System.Windows.Forms.DataGridView();
+            this.obrisiBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniDg)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +110,7 @@
             // 
             // dodajZapBtn
             // 
-            this.dodajZapBtn.Location = new System.Drawing.Point(180, 153);
+            this.dodajZapBtn.Location = new System.Drawing.Point(150, 147);
             this.dodajZapBtn.Name = "dodajZapBtn";
             this.dodajZapBtn.Size = new System.Drawing.Size(132, 23);
             this.dodajZapBtn.TabIndex = 7;
@@ -127,11 +128,22 @@
             this.ZaposleniDg.Size = new System.Drawing.Size(330, 426);
             this.ZaposleniDg.TabIndex = 8;
             // 
+            // obrisiBtn
+            // 
+            this.obrisiBtn.Location = new System.Drawing.Point(389, 243);
+            this.obrisiBtn.Name = "obrisiBtn";
+            this.obrisiBtn.Size = new System.Drawing.Size(75, 23);
+            this.obrisiBtn.TabIndex = 9;
+            this.obrisiBtn.Text = "Obrisi";
+            this.obrisiBtn.UseVisualStyleBackColor = true;
+            this.obrisiBtn.Click += new System.EventHandler(this.obrisiBtn_Click);
+            // 
             // Zaposleni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.obrisiBtn);
             this.Controls.Add(this.ZaposleniDg);
             this.Controls.Add(this.dodajZapBtn);
             this.Controls.Add(this.PrezZapTxt);
@@ -162,5 +174,6 @@
         private TextBox PrezZapTxt;
         private Button dodajZapBtn;
         private DataGridView ZaposleniDg;
+        private Button obrisiBtn;
     }
 }

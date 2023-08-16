@@ -76,6 +76,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "Prodaja";
             this.Text = "Prodaja";
+            this.Load += new System.EventHandler(this.Prodaja_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

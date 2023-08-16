@@ -17,18 +17,24 @@ namespace Zlatno_Burence
             InitializeComponent();
         }
 
+        //-funkcije za prebacivanje formi
         private void prodajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Prodaja frmProdaja = new Prodaja(); ;
-            frmProdaja.ShowDialog();
+            frmProdaja.Show();
         }
 
         private void zaposleniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Zaposleni frmZaposleni = new Zaposleni(); ;
-            frmZaposleni.ShowDialog();
+            frmZaposleni.Show();
+        }
+
+        private void Nabavka_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
