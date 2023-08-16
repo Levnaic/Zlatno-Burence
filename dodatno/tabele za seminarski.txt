@@ -1,0 +1,34 @@
+Tabele koje bih koristio su: 
+	1. pića
+		id pića (primarni ključ)
+		ime pića
+		cena pića
+		na stanju
+	2. zaposleni
+		id zaposlenog (primarni ključ)
+		ime zaposlenog
+		prezime zaposlenog
+	3. prodaja 
+		id prodaje (primarni ključ)
+		id pića (strani ključ)
+		id zaposlenog(strani ključ)
+		kvantitet
+		cena prodaje
+		vreme prodaje
+	4. nabavka
+		id nabavke (primarni ključ)
+		id pića (strani ključ)
+		id zaposlenog (strani ključ)
+		kvantitet
+		cena nabavke
+		datum nabavke
+	5. dnevni profit
+		id denvnog profita (primarni ključ)
+		id zaposlenog (strani ključ)
+		datum
+		totalni profit (računa skup svih dnevnih profita)
+	
+	6. magacin
+		id magacina (primarni kljuc)
+		id pica (strani kljuc)
+		kvantitet pica

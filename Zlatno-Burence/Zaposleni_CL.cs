@@ -41,7 +41,8 @@ namespace Zlatno_Burence
         }
 
         //konekcioni string
-        private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\ZlatnoBurence.mdf;Integrated Security=True";
+        
+        private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\L\\Desktop\\faks\\si1\\semianrski\\Zlatno-Burence\\ZlatnoBurence.mdf;Integrated Security=True";
 
         //funkcije za manipulisanje bazom
         public void dodajZaposlenog()

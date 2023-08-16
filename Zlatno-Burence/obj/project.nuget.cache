@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TZN3YTmXQqxcL2FLdiXEG8cXYPuEeiDQiXq0aydfv2c5Iy1wdqMx4jzMMD8bALXeBktvWbn3DaohXy3Au/ambQ==",
+  "dgSpecHash": "KLIpsWJ5074XuVSy8ngz7lwxG1uoNMrpz9kQE87tSUcARW64ZDzwvM7HxrIcS88gpGiumAn3w2Vo+QM2Jmdlcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\L\\Desktop\\faks\\si1\\semianrski3\\Zlatno-Burence\\Zlatno-Burence.csproj",
+  "projectFilePath": "C:\\Users\\L\\Desktop\\faks\\si1\\semianrski\\Zlatno-Burence\\Zlatno-Burence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\L\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\L\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
