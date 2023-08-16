@@ -16,5 +16,19 @@ namespace Zlatno_Burence
         {
             InitializeComponent();
         }
+
+        private void prodajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Prodaja frmProdaja = new Prodaja(); ;
+            frmProdaja.ShowDialog();
+        }
+
+        private void zaposleniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Zaposleni frmZaposleni = new Zaposleni(); ;
+            frmZaposleni.ShowDialog();
+        }
     }
 }

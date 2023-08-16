@@ -28,12 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.nabavkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prodajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zaposleniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nabavkaToolStripMenuItem,
+            this.prodajaToolStripMenuItem,
+            this.zaposleniToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // nabavkaToolStripMenuItem
+            // 
+            this.nabavkaToolStripMenuItem.Name = "nabavkaToolStripMenuItem";
+            this.nabavkaToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.nabavkaToolStripMenuItem.Text = "Nabavka";
+            this.nabavkaToolStripMenuItem.Click += new System.EventHandler(this.nabavkaToolStripMenuItem_Click);
+            // 
+            // prodajaToolStripMenuItem
+            // 
+            this.prodajaToolStripMenuItem.Name = "prodajaToolStripMenuItem";
+            this.prodajaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.prodajaToolStripMenuItem.Text = "Prodaja";
+            // 
+            // zaposleniToolStripMenuItem
+            // 
+            this.zaposleniToolStripMenuItem.Name = "zaposleniToolStripMenuItem";
+            this.zaposleniToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.zaposleniToolStripMenuItem.Text = "Zaposleni";
+            this.zaposleniToolStripMenuItem.Click += new System.EventHandler(this.zaposleniToolStripMenuItem_Click);
+            // 
+            // Prodaja
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.menuStrip1);
+            this.Name = "Prodaja";
+            this.Text = "Prodaja";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem nabavkaToolStripMenuItem;
+        private ToolStripMenuItem prodajaToolStripMenuItem;
+        private ToolStripMenuItem zaposleniToolStripMenuItem;
     }
 }
