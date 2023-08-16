@@ -127,6 +127,7 @@
             this.ZaposleniDg.RowTemplate.Height = 25;
             this.ZaposleniDg.Size = new System.Drawing.Size(330, 426);
             this.ZaposleniDg.TabIndex = 8;
+            this.ZaposleniDg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ZaposleniDg_CellClick);
             // 
             // obrisiBtn
             // 

@@ -14,7 +14,7 @@ namespace Zlatno_Burence
     {
         //Promenjive
         List<Zaposleni_CL> zaposleniList = new List<Zaposleni_CL>();
-        int indeksSelektovanog = 1;
+        int indeksSelektovanog = -1;
 
 
 
@@ -109,7 +109,7 @@ namespace Zlatno_Burence
         {
             if (ZaposleniDg.SelectedRows.Count > 0)
             {
-                if (MessageBox.Show("Da li zelite da obrisete odabranog studenta?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Da li zelite da obrisete odabranog zaposlenog?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
                     Zaposleni_CL selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
@@ -136,6 +136,8 @@ namespace Zlatno_Burence
                 ZaposleniDg.Rows[ZaposleniDg.CurrentRow.Index].Selected = true;
                 prikaziZaposlenogTxt();
             }
+
         }
+
     }
 }

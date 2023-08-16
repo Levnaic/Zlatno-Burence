@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\Zlatno-Burence.csproj": {}
+    "C:\\Users\\L\\Desktop\\faks\\si1\\semianrski3\\Zlatno-Burence\\Zlatno-Burence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\Zlatno-Burence.csproj": {
+    "C:\\Users\\L\\Desktop\\faks\\si1\\semianrski3\\Zlatno-Burence\\Zlatno-Burence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\Zlatno-Burence.csproj",
+        "projectUniqueName": "C:\\Users\\L\\Desktop\\faks\\si1\\semianrski3\\Zlatno-Burence\\Zlatno-Burence.csproj",
         "projectName": "Zlatno-Burence",
-        "projectPath": "C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\Zlatno-Burence.csproj",
+        "projectPath": "C:\\Users\\L\\Desktop\\faks\\si1\\semianrski3\\Zlatno-Burence\\Zlatno-Burence.csproj",
         "packagesPath": "C:\\Users\\L\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L\\Desktop\\faks\\si1\\seminarski\\Zlatno-Burence\\Zlatno-Burence\\obj\\",
+        "outputPath": "C:\\Users\\L\\Desktop\\faks\\si1\\semianrski3\\Zlatno-Burence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\L\\AppData\\Roaming\\NuGet\\NuGet.Config",
