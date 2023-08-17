@@ -13,7 +13,7 @@ namespace Zlatno_Burence
     public partial class Zaposleni : Form
     {
         //Promenjive
-        List<Zaposleni_CL> zaposleniList = new List<Zaposleni_CL>();
+        List<CL_Zaposleni> zaposleniList = new List<CL_Zaposleni>();
         int indeksSelektovanog = -1;
 
 
@@ -40,7 +40,7 @@ namespace Zlatno_Burence
         private void prikaziZaposlenogTxt() 
         {
             int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
-            Zaposleni_CL selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
+            CL_Zaposleni selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
             if (selektovaniZaposleni!= null )
             {
                 imeZapTxt.Text = selektovaniZaposleni.Ime;
@@ -51,7 +51,7 @@ namespace Zlatno_Burence
 
         private void prikazZaposlenigDGV()
         {
-            zaposleniList = new Zaposleni_CL().ucitajZaposlene();
+            zaposleniList = new CL_Zaposleni().ucitajZaposlene();
             ZaposleniDg.Rows.Clear();
             for (int i = 0; i < zaposleniList.Count; i++)
             {
@@ -91,7 +91,7 @@ namespace Zlatno_Burence
         //-funkcije za dugmad
         private void dodajZapBtn_Click(object sender, EventArgs e)
         {
-            Zaposleni_CL zap = new Zaposleni_CL();
+            CL_Zaposleni zap = new CL_Zaposleni();
             zap.Ime = imeZapTxt.Text;
             zap.Prezime = PrezZapTxt.Text;
             zap.dodajZaposlenog();
@@ -112,7 +112,7 @@ namespace Zlatno_Burence
                 if (MessageBox.Show("Da li zelite da obrisete odabranog zaposlenog?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
-                    Zaposleni_CL selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
+                    CL_Zaposleni selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
                     if (selektovaniZaposleni != null) 
                     {
                         selektovaniZaposleni.obrisiZaposlenog();
@@ -144,7 +144,7 @@ namespace Zlatno_Burence
             if (ZaposleniDg.SelectedRows.Count> 0) 
             {
                 int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
-                Zaposleni_CL selektovaniZaposleni = zaposleniList.Where(x=> x.ID == idSelektovanog).FirstOrDefault();
+                CL_Zaposleni selektovaniZaposleni = zaposleniList.Where(x=> x.ID == idSelektovanog).FirstOrDefault();
 
                 if (selektovaniZaposleni!= null) 
                 {
