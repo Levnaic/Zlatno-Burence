@@ -73,3 +73,4 @@ C:\Users\L\Desktop\faks\si1\semianrski\Zlatno-Burence\obj\Debug\net6.0-windows\r
 C:\Users\L\Desktop\faks\si1\semianrski\Zlatno-Burence\obj\Debug\net6.0-windows\Zlatno-Burence.pdb
 C:\Users\L\Desktop\faks\si1\semianrski\Zlatno-Burence\obj\Debug\net6.0-windows\Zlatno-Burence.genruntimeconfig.cache
 C:\Users\L\Desktop\faks\si1\semianrski\Zlatno-Burence\obj\Debug\net6.0-windows\ref\Zlatno-Burence.dll
+C:\Users\L\Desktop\faks\si1\semianrski\Zlatno-Burence\obj\Debug\net6.0-windows\Zlatno_Burence.Pica.resources

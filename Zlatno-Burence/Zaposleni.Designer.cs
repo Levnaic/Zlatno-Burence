@@ -40,6 +40,7 @@
             this.ZaposleniDg = new System.Windows.Forms.DataGridView();
             this.obrisiBtn = new System.Windows.Forms.Button();
             this.azurirajBtn = new System.Windows.Forms.Button();
+            this.pićaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniDg)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nabavkaToolStripMenuItem,
             this.prodajaToolStripMenuItem,
-            this.zaposleniToolStripMenuItem});
+            this.zaposleniToolStripMenuItem,
+            this.pićaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -111,7 +113,7 @@
             // 
             // dodajZapBtn
             // 
-            this.dodajZapBtn.Location = new System.Drawing.Point(150, 147);
+            this.dodajZapBtn.Location = new System.Drawing.Point(162, 151);
             this.dodajZapBtn.Name = "dodajZapBtn";
             this.dodajZapBtn.Size = new System.Drawing.Size(132, 23);
             this.dodajZapBtn.TabIndex = 7;
@@ -129,10 +131,11 @@
             this.ZaposleniDg.Size = new System.Drawing.Size(330, 426);
             this.ZaposleniDg.TabIndex = 8;
             this.ZaposleniDg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ZaposleniDg_CellClick);
+            this.ZaposleniDg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ZaposleniDg_CellContentClick);
             // 
             // obrisiBtn
             // 
-            this.obrisiBtn.Location = new System.Drawing.Point(207, 200);
+            this.obrisiBtn.Location = new System.Drawing.Point(237, 200);
             this.obrisiBtn.Name = "obrisiBtn";
             this.obrisiBtn.Size = new System.Drawing.Size(75, 23);
             this.obrisiBtn.TabIndex = 9;
@@ -142,13 +145,19 @@
             // 
             // azurirajBtn
             // 
-            this.azurirajBtn.Location = new System.Drawing.Point(126, 200);
+            this.azurirajBtn.Location = new System.Drawing.Point(135, 200);
             this.azurirajBtn.Name = "azurirajBtn";
             this.azurirajBtn.Size = new System.Drawing.Size(75, 23);
             this.azurirajBtn.TabIndex = 10;
             this.azurirajBtn.Text = "Azuriraj";
             this.azurirajBtn.UseVisualStyleBackColor = true;
             this.azurirajBtn.Click += new System.EventHandler(this.azurirajBtn_Click);
+            // 
+            // pićaToolStripMenuItem
+            // 
+            this.pićaToolStripMenuItem.Name = "pićaToolStripMenuItem";
+            this.pićaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.pićaToolStripMenuItem.Text = "Pića";
             // 
             // Zaposleni
             // 
@@ -192,5 +201,6 @@
         private DataGridView ZaposleniDg;
         private Button obrisiBtn;
         private Button azurirajBtn;
+        private ToolStripMenuItem pićaToolStripMenuItem;
     }
 }

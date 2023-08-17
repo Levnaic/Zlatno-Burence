@@ -22,7 +22,6 @@ namespace Zlatno_Burence
         {
             InitializeComponent();
 
-            //inicijalizacija komponenti
             ZaposleniDg.AllowUserToAddRows = false;
             ZaposleniDg.AllowUserToDeleteRows = false;
             ZaposleniDg.ReadOnly = true;
@@ -161,6 +160,11 @@ namespace Zlatno_Burence
             {
                 MessageBox.Show("Nema podataka ili ni jedan red nije odabran!");
             }
+        }
+
+        private void ZaposleniDg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
