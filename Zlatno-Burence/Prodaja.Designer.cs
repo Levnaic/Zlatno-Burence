@@ -110,7 +110,8 @@
             this.txtJeger = new System.Windows.Forms.TextBox();
             this.txtVodaKnjaz = new System.Windows.Forms.TextBox();
             this.txtNegaziranaVoda = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUnesi = new System.Windows.Forms.Button();
+            this.btnOcisti = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -771,21 +772,31 @@
             this.txtNegaziranaVoda.Size = new System.Drawing.Size(100, 23);
             this.txtNegaziranaVoda.TabIndex = 63;
             // 
-            // button1
+            // btnUnesi
             // 
-            this.button1.Location = new System.Drawing.Point(356, 558);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 80;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUnesi.Location = new System.Drawing.Point(289, 587);
+            this.btnUnesi.Name = "btnUnesi";
+            this.btnUnesi.Size = new System.Drawing.Size(75, 23);
+            this.btnUnesi.TabIndex = 80;
+            this.btnUnesi.Text = "Unesi";
+            this.btnUnesi.UseVisualStyleBackColor = true;
+            // 
+            // btnOcisti
+            // 
+            this.btnOcisti.Location = new System.Drawing.Point(394, 587);
+            this.btnOcisti.Name = "btnOcisti";
+            this.btnOcisti.Size = new System.Drawing.Size(75, 23);
+            this.btnOcisti.TabIndex = 81;
+            this.btnOcisti.Text = "Očisti Unos";
+            this.btnOcisti.UseVisualStyleBackColor = true;
             // 
             // Prodaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 916);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOcisti);
+            this.Controls.Add(this.btnUnesi);
             this.Controls.Add(this.txtCaj);
             this.Controls.Add(this.txtDomacaKafa);
             this.Controls.Add(this.txtNesKafa);
@@ -962,6 +973,7 @@
         private TextBox txtJeger;
         private TextBox txtVodaKnjaz;
         private TextBox txtNegaziranaVoda;
-        private Button button1;
+        private Button btnUnesi;
+        private Button btnOcisti;
     }
 }

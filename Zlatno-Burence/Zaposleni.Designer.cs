@@ -132,17 +132,17 @@
             // 
             // obrisiBtn
             // 
-            this.obrisiBtn.Location = new System.Drawing.Point(389, 243);
+            this.obrisiBtn.Location = new System.Drawing.Point(207, 200);
             this.obrisiBtn.Name = "obrisiBtn";
             this.obrisiBtn.Size = new System.Drawing.Size(75, 23);
             this.obrisiBtn.TabIndex = 9;
-            this.obrisiBtn.Text = "Obrisi";
+            this.obrisiBtn.Text = "Obriši";
             this.obrisiBtn.UseVisualStyleBackColor = true;
             this.obrisiBtn.Click += new System.EventHandler(this.obrisiBtn_Click);
             // 
             // azurirajBtn
             // 
-            this.azurirajBtn.Location = new System.Drawing.Point(389, 272);
+            this.azurirajBtn.Location = new System.Drawing.Point(126, 200);
             this.azurirajBtn.Name = "azurirajBtn";
             this.azurirajBtn.Size = new System.Drawing.Size(75, 23);
             this.azurirajBtn.TabIndex = 10;
