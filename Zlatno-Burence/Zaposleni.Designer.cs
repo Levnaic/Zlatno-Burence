@@ -164,8 +164,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.MaximumSize = new System.Drawing.Size(1280, 1024);
             this.Name = "Zaposleni";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zaposleni";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Zaposleni_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
