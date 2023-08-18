@@ -17,6 +17,13 @@ namespace Zlatno_Burence
             InitializeComponent();
         }
 
+        //load funkcija
+        private void Nabavka_Load(object sender, EventArgs e)
+        {
+        
+
+        }
+
         //-funkcije za prebacivanje formi
         private void prodajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -38,11 +45,10 @@ namespace Zlatno_Burence
             frmPica.Show();
         }
 
-        private void Nabavka_Load(object sender, EventArgs e)
+        private void btnUnesi_Click(object sender, EventArgs e)
         {
-
+            CL_Nabavka nab = new CL_Nabavka();
+            nab.azurirajNaStanjuPica();
         }
-
-       
     }
 }

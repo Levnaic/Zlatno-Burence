@@ -99,6 +99,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPivoJelen033 = new System.Windows.Forms.TextBox();
+            this.cmbZaposleni = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +162,7 @@
             this.btnUnesi.TabIndex = 160;
             this.btnUnesi.Text = "Unesi";
             this.btnUnesi.UseVisualStyleBackColor = true;
+            this.btnUnesi.Click += new System.EventHandler(this.btnUnesi_Click);
             // 
             // txtCaj
             // 
@@ -673,11 +676,30 @@
             this.txtPivoJelen033.Size = new System.Drawing.Size(100, 23);
             this.txtPivoJelen033.TabIndex = 128;
             // 
+            // cmbZaposleni
+            // 
+            this.cmbZaposleni.FormattingEnabled = true;
+            this.cmbZaposleni.Location = new System.Drawing.Point(79, 27);
+            this.cmbZaposleni.Name = "cmbZaposleni";
+            this.cmbZaposleni.Size = new System.Drawing.Size(121, 23);
+            this.cmbZaposleni.TabIndex = 162;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.TabIndex = 163;
+            this.label3.Text = "Zaposleni:";
+            // 
             // Nabavka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 763);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cmbZaposleni);
             this.Controls.Add(this.btnOcisti);
             this.Controls.Add(this.btnUnesi);
             this.Controls.Add(this.txtCaj);
@@ -832,5 +854,7 @@
         private Label label1;
         private Label label5;
         private TextBox txtPivoJelen033;
+        private ComboBox cmbZaposleni;
+        private Label label3;
     }
 }
