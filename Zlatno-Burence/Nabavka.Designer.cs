@@ -32,6 +32,7 @@
             this.nabavkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prodajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nabavkaToolStripMenuItem,
             this.prodajaToolStripMenuItem,
-            this.zaposleniToolStripMenuItem});
+            this.zaposleniToolStripMenuItem,
+            this.picaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -67,6 +69,13 @@
             this.zaposleniToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.zaposleniToolStripMenuItem.Text = "Zaposleni";
             this.zaposleniToolStripMenuItem.Click += new System.EventHandler(this.zaposleniToolStripMenuItem_Click);
+            // 
+            // picaToolStripMenuItem
+            // 
+            this.picaToolStripMenuItem.Name = "picaToolStripMenuItem";
+            this.picaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.picaToolStripMenuItem.Text = "Pica";
+            this.picaToolStripMenuItem.Click += new System.EventHandler(this.picaToolStripMenuItem_Click);
             // 
             // Nabavka
             // 
@@ -94,5 +103,6 @@
         private ToolStripMenuItem nabavkaToolStripMenuItem;
         private ToolStripMenuItem prodajaToolStripMenuItem;
         private ToolStripMenuItem zaposleniToolStripMenuItem;
+        private ToolStripMenuItem picaToolStripMenuItem;
     }
 }

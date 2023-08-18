@@ -83,8 +83,14 @@ namespace Zlatno_Burence
         private void prodajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            Prodaja frmProdaja = new Prodaja(); ;
+            Prodaja frmProdaja = new Prodaja();
             frmProdaja.Show();
+        }
+        private void pićaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Pica frmPica = new Pica();
+            frmPica.Show();
         }
 
         //-funkcije za dugmad
@@ -127,25 +133,14 @@ namespace Zlatno_Burence
             }
         }
 
-        //-funkcije za dg
-        private void ZaposleniDg_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (ZaposleniDg.CurrentRow != null)
-            {
-                ZaposleniDg.Rows[ZaposleniDg.CurrentRow.Index].Selected = true;
-                prikaziZaposlenogTxt();
-            }
-
-        }
-
         private void azurirajBtn_Click(object sender, EventArgs e)
         {
-            if (ZaposleniDg.SelectedRows.Count> 0) 
+            if (ZaposleniDg.SelectedRows.Count > 0)
             {
                 int idSelektovanog = (int)ZaposleniDg.SelectedRows[0].Cells["ID"].Value;
-                CL_Zaposleni selektovaniZaposleni = zaposleniList.Where(x=> x.ID == idSelektovanog).FirstOrDefault();
+                CL_Zaposleni selektovaniZaposleni = zaposleniList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
 
-                if (selektovaniZaposleni!= null) 
+                if (selektovaniZaposleni != null)
                 {
                     selektovaniZaposleni.Ime = imeZapTxt.Text;
                     selektovaniZaposleni.Prezime = PrezZapTxt.Text;
@@ -162,9 +157,24 @@ namespace Zlatno_Burence
             }
         }
 
+        //-funkcije za dg
+        private void ZaposleniDg_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (ZaposleniDg.CurrentRow != null)
+            {
+                ZaposleniDg.Rows[ZaposleniDg.CurrentRow.Index].Selected = true;
+                prikaziZaposlenogTxt();
+            }
+
+        }
+
+      
+
         private void ZaposleniDg_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+       
     }
 }

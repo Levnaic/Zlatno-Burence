@@ -112,6 +112,7 @@
             this.txtNegaziranaVoda = new System.Windows.Forms.TextBox();
             this.btnUnesi = new System.Windows.Forms.Button();
             this.btnOcisti = new System.Windows.Forms.Button();
+            this.picaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +122,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nabavkaToolStripMenuItem,
             this.prodajaToolStripMenuItem,
-            this.zaposleniToolStripMenuItem});
+            this.zaposleniToolStripMenuItem,
+            this.picaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(785, 24);
@@ -790,6 +792,13 @@
             this.btnOcisti.Text = "Očisti Unos";
             this.btnOcisti.UseVisualStyleBackColor = true;
             // 
+            // picaToolStripMenuItem
+            // 
+            this.picaToolStripMenuItem.Name = "picaToolStripMenuItem";
+            this.picaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.picaToolStripMenuItem.Text = "Pica";
+            this.picaToolStripMenuItem.Click += new System.EventHandler(this.picaToolStripMenuItem_Click);
+            // 
             // Prodaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -975,5 +984,6 @@
         private TextBox txtNegaziranaVoda;
         private Button btnUnesi;
         private Button btnOcisti;
+        private ToolStripMenuItem picaToolStripMenuItem;
     }
 }

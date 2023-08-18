@@ -37,7 +37,8 @@ namespace Zlatno_Burence
             get { return cena; } 
             set 
             {
-                if (value <= 0) throw new Exception("Morate uneti vrednost cene koja je veća od 0");
+                if (value < 0) throw new Exception("Morate uneti vrednost cene koja je veća od 0");
+                cena = value;
             } 
         }
 
@@ -47,6 +48,7 @@ namespace Zlatno_Burence
             set
             {
                 if (value < 0) throw new Exception("Morate uneti vrednost Na stanju koja nije manja od 0");
+                naStanju = value;
             }
         }
 
@@ -62,7 +64,7 @@ namespace Zlatno_Burence
                 SqlCommand command = connection.CreateCommand();
                 command.CommandText = insertSql;
                 command.Parameters.Add(new SqlParameter("@Ime", Ime));
-                command.Parameters.Add(new SqlParameter("@Prezime", Cena));
+                command.Parameters.Add(new SqlParameter("@Cena", Cena));
                 command.Parameters.Add(new SqlParameter("@NaStanju", NaStanju));
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -71,14 +73,14 @@ namespace Zlatno_Burence
 
         public void azurirajPica()
         {
-            string updateSql = "UPDATE Pica " + "SET ImePica= @Ime, Cena=@Cena, NaStanju= @NaStanju " + "WHERE Id = @Id;";
+            string updateSql = "UPDATE Pica " + "SET ImePica= @Ime, CenaPica=@Cena, NaStanju= @NaStanju " + "WHERE Id = @Id;";
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 SqlCommand command = connection.CreateCommand();
                 command.CommandText = updateSql;
                 command.Parameters.Add(new SqlParameter("@Id", ID));
                 command.Parameters.Add(new SqlParameter("@Ime", Ime));
-                command.Parameters.Add(new SqlParameter("@Prezime", Cena));
+                command.Parameters.Add(new SqlParameter("@Cena", Cena));
                 command.Parameters.Add(new SqlParameter("@NaStanju", NaStanju));
                 connection.Open();
                 command.ExecuteNonQuery();

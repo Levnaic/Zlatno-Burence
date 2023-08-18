@@ -32,6 +32,7 @@
             this.nabavkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prodajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pićaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imeZapTxt = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.ZaposleniDg = new System.Windows.Forms.DataGridView();
             this.obrisiBtn = new System.Windows.Forms.Button();
             this.azurirajBtn = new System.Windows.Forms.Button();
-            this.pićaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniDg)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,13 @@
             this.zaposleniToolStripMenuItem.Name = "zaposleniToolStripMenuItem";
             this.zaposleniToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.zaposleniToolStripMenuItem.Text = "Zaposleni";
+            // 
+            // pićaToolStripMenuItem
+            // 
+            this.pićaToolStripMenuItem.Name = "pićaToolStripMenuItem";
+            this.pićaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.pićaToolStripMenuItem.Text = "Pića";
+            this.pićaToolStripMenuItem.Click += new System.EventHandler(this.pićaToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -152,12 +159,6 @@
             this.azurirajBtn.Text = "Azuriraj";
             this.azurirajBtn.UseVisualStyleBackColor = true;
             this.azurirajBtn.Click += new System.EventHandler(this.azurirajBtn_Click);
-            // 
-            // pićaToolStripMenuItem
-            // 
-            this.pićaToolStripMenuItem.Name = "pićaToolStripMenuItem";
-            this.pićaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.pićaToolStripMenuItem.Text = "Pića";
             // 
             // Zaposleni
             // 

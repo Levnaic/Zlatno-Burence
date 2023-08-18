@@ -31,10 +31,18 @@ namespace Zlatno_Burence
             Zaposleni frmZaposleni = new Zaposleni(); ;
             frmZaposleni.Show();
         }
+        private void picaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Pica frmPica = new Pica();
+            frmPica.Show();
+        }
 
         private void Nabavka_Load(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

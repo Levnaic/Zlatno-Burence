@@ -19,13 +19,22 @@ namespace Zlatno_Burence
         private void zaposleniToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Zaposleni frmZaposleni = new Zaposleni(); ;
+            Zaposleni frmZaposleni = new Zaposleni();
             frmZaposleni.Show();
+        }
+
+        private void picaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pica frmPica = new Pica();
+            frmPica.Show();
         }
 
         private void Prodaja_Load(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

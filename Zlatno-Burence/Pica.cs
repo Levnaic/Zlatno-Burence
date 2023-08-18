@@ -41,7 +41,9 @@ namespace Zlatno_Burence
             if (selektovanoPice != null)
             {
                 txtImePica.Text = selektovanoPice.Ime;
-                //treba se nastaviti sa txt poljima ali se nailazi na neki error, tu si stao 
+                txtCenaPica.Text = selektovanoPice.Cena.ToString();
+                txtNaStanju.Text = selektovanoPice.NaStanju.ToString();
+                //mozda nije tacno
             }
         }
 
@@ -73,6 +75,100 @@ namespace Zlatno_Burence
         private void Pica_Load(object sender, EventArgs e)
         {
 
+        }
+
+        //-funkcije za prebacivanje formi
+        private void nabavkaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Nabavka frmNabavka = new Nabavka();
+            frmNabavka.Show();
+        }
+
+        private void prodajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Prodaja frmProdaja = new Prodaja(); ;
+            frmProdaja.Show();
+        }
+
+        private void zaposleniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Zaposleni frmProdaja = new Zaposleni(); ;
+            frmProdaja.Show();
+        }
+
+        //-funkcije za dugmad
+        private void btnDodajPice_Click(object sender, EventArgs e)
+        {
+            CL_Pica pic = new CL_Pica();
+            pic.Ime = txtImePica.Text;
+            pic.Cena = Int32.Parse(txtCenaPica.Text);
+            pic.NaStanju = Int32.Parse(txtNaStanju.Text);
+            pic.dodajPice();
+            indeksSelektovanog = dgPica.Rows.Count;
+            prikazPicaDGV();
+        }
+
+
+        private void btnObrisiPice_Click(object sender, EventArgs e)
+        {
+            if (dgPica.SelectedRows.Count > 0) 
+            {
+                if (MessageBox.Show("Da li zelite da obrisete odabrano pice?", "Potvrda brisanja", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int idSelektovanog = (int)dgPica.SelectedRows[0].Cells["ID"].Value;
+                    CL_Pica selektovanoPice = picaList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
+                    if (selektovanoPice != null)
+                    {
+                        selektovanoPice.obrisiPice();
+                    }
+
+                    indeksSelektovanog = -1;
+                    prikazPicaDGV();
+                }
+                else
+                {
+                    MessageBox.Show("Nema podataka ili ni jedan red nije odabran!");
+                }
+            }
+           
+        }
+
+        //-funkcija za dg
+        private void dgPica_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgPica.CurrentRow != null)
+            {
+                dgPica.Rows[dgPica.CurrentRow.Index].Selected = true;
+                prikaziPiceTxt();
+            }
+        }
+
+        private void btnAzurirajPice_Click(object sender, EventArgs e)
+        {
+            if (dgPica.SelectedRows.Count > 0)
+            {
+                int idSelektovanog = (int)dgPica.SelectedRows[0].Cells["ID"].Value;
+                CL_Pica selektovanoPice = picaList.Where(x => x.ID == idSelektovanog).FirstOrDefault();
+
+                if (selektovanoPice != null)
+                {
+                    selektovanoPice.Ime = txtImePica.Text;
+                    selektovanoPice.Cena = Int32.Parse(txtCenaPica.Text);
+                    selektovanoPice.NaStanju = Int32.Parse(txtNaStanju.Text);
+                    selektovanoPice.azurirajPica();
+                    indeksSelektovanog = dgPica.SelectedRows[0].Index;
+
+                    prikazPicaDGV();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Nema podataka ili ni jedan red nije odabran!");
+            }
         }
     }
 }

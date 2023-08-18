@@ -55,6 +55,7 @@
             this.btnAzurirajPice.TabIndex = 17;
             this.btnAzurirajPice.Text = "Azuriraj";
             this.btnAzurirajPice.UseVisualStyleBackColor = true;
+            this.btnAzurirajPice.Click += new System.EventHandler(this.btnAzurirajPice_Click);
             // 
             // btnObrisiPice
             // 
@@ -64,6 +65,7 @@
             this.btnObrisiPice.TabIndex = 16;
             this.btnObrisiPice.Text = "Obriši";
             this.btnObrisiPice.UseVisualStyleBackColor = true;
+            this.btnObrisiPice.Click += new System.EventHandler(this.btnObrisiPice_Click);
             // 
             // btnDodajPice
             // 
@@ -73,6 +75,7 @@
             this.btnDodajPice.TabIndex = 15;
             this.btnDodajPice.Text = "Dodaj Pice";
             this.btnDodajPice.UseVisualStyleBackColor = true;
+            this.btnDodajPice.Click += new System.EventHandler(this.btnDodajPice_Click);
             // 
             // txtCenaPica
             // 
@@ -142,18 +145,21 @@
             this.nabavkaToolStripMenuItem.Name = "nabavkaToolStripMenuItem";
             this.nabavkaToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.nabavkaToolStripMenuItem.Text = "Nabavka";
+            this.nabavkaToolStripMenuItem.Click += new System.EventHandler(this.nabavkaToolStripMenuItem_Click);
             // 
             // prodajaToolStripMenuItem
             // 
             this.prodajaToolStripMenuItem.Name = "prodajaToolStripMenuItem";
             this.prodajaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.prodajaToolStripMenuItem.Text = "Prodaja";
+            this.prodajaToolStripMenuItem.Click += new System.EventHandler(this.prodajaToolStripMenuItem_Click);
             // 
             // zaposleniToolStripMenuItem
             // 
             this.zaposleniToolStripMenuItem.Name = "zaposleniToolStripMenuItem";
             this.zaposleniToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.zaposleniToolStripMenuItem.Text = "Zaposleni";
+            this.zaposleniToolStripMenuItem.Click += new System.EventHandler(this.zaposleniToolStripMenuItem_Click);
             // 
             // pićaToolStripMenuItem
             // 
@@ -165,11 +171,12 @@
             // 
             this.dgPica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPica.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgPica.Location = new System.Drawing.Point(560, 24);
+            this.dgPica.Location = new System.Drawing.Point(373, 24);
             this.dgPica.Name = "dgPica";
             this.dgPica.RowTemplate.Height = 25;
-            this.dgPica.Size = new System.Drawing.Size(240, 426);
+            this.dgPica.Size = new System.Drawing.Size(427, 426);
             this.dgPica.TabIndex = 21;
+            this.dgPica.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPica_CellClick);
             // 
             // Pica
             // 
@@ -187,8 +194,11 @@
             this.Controls.Add(this.txtImePica);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(1280, 1024);
             this.Name = "Pica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pica";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pica_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
