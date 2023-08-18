@@ -28,7 +28,6 @@ namespace Zlatno_Burence
             dgPica.Columns["ID"].Visible=false;
             dgPica.Columns.Add("ime", "Ime");
             dgPica.Columns.Add("cena", "Cena");
-            dgPica.Columns.Add("naStanju", "NaStanju");
 
             prikazPicaDGV();
 
@@ -42,7 +41,6 @@ namespace Zlatno_Burence
             {
                 txtImePica.Text = selektovanoPice.Ime;
                 txtCenaPica.Text = selektovanoPice.Cena.ToString();
-                txtNaStanju.Text = selektovanoPice.NaStanju.ToString();
                 //mozda nije tacno
             }
         }
@@ -57,7 +55,6 @@ namespace Zlatno_Burence
                 dgPica.Rows[i].Cells["ID"].Value = picaList[i].ID;
                 dgPica.Rows[i].Cells["Ime"].Value = picaList[i].Ime;
                 dgPica.Rows[i].Cells["Cena"].Value = picaList[i].Cena;
-                dgPica.Rows[i].Cells["NaStanju"].Value = picaList[i].NaStanju;
 
             }
 
@@ -105,7 +102,6 @@ namespace Zlatno_Burence
             CL_Pica pic = new CL_Pica();
             pic.Ime = txtImePica.Text;
             pic.Cena = Int32.Parse(txtCenaPica.Text);
-            pic.NaStanju = Int32.Parse(txtNaStanju.Text);
             pic.dodajPice();
             indeksSelektovanog = dgPica.Rows.Count;
             prikazPicaDGV();
@@ -157,7 +153,6 @@ namespace Zlatno_Burence
                 {
                     selektovanoPice.Ime = txtImePica.Text;
                     selektovanoPice.Cena = Int32.Parse(txtCenaPica.Text);
-                    selektovanoPice.NaStanju = Int32.Parse(txtNaStanju.Text);
                     selektovanoPice.azurirajPica();
                     indeksSelektovanog = dgPica.SelectedRows[0].Index;
 

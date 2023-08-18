@@ -42,16 +42,6 @@ namespace Zlatno_Burence
             } 
         }
 
-        public int NaStanju
-        {
-            get { return naStanju; }
-            set
-            {
-                if (value < 0) throw new Exception("Morate uneti vrednost Na stanju koja nije manja od 0");
-                naStanju = value;
-            }
-        }
-
         //konekcioni string
         private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\L\\Desktop\\faks\\si1\\semianrski\\Zlatno-Burence\\ZlatnoBurence.mdf;Integrated Security=True";
 
@@ -65,7 +55,6 @@ namespace Zlatno_Burence
                 command.CommandText = insertSql;
                 command.Parameters.Add(new SqlParameter("@Ime", Ime));
                 command.Parameters.Add(new SqlParameter("@Cena", Cena));
-                command.Parameters.Add(new SqlParameter("@NaStanju", NaStanju));
                 connection.Open();
                 command.ExecuteNonQuery();
             }
@@ -81,7 +70,6 @@ namespace Zlatno_Burence
                 command.Parameters.Add(new SqlParameter("@Id", ID));
                 command.Parameters.Add(new SqlParameter("@Ime", Ime));
                 command.Parameters.Add(new SqlParameter("@Cena", Cena));
-                command.Parameters.Add(new SqlParameter("@NaStanju", NaStanju));
                 connection.Open();
                 command.ExecuteNonQuery();
             }
@@ -126,7 +114,6 @@ namespace Zlatno_Burence
                         pic.ID = Int32.Parse(reader["Id"].ToString());
                         pic.Ime = reader["ImePica"].ToString();
                         pic.Cena = Int32.Parse(reader["CenaPica"].ToString());
-                        pic.NaStanju = Int32.Parse(reader["NaStanju"].ToString()) ;
                         pica.Add(pic);
                     }
                 }

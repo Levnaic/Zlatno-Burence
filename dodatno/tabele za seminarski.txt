@@ -10,16 +10,12 @@ Tabele koje bih koristio su:
 		prezime zaposlenog
 	3. prodaja 
 		id prodaje (primarni ključ)
-		id pića (strani ključ)
 		id zaposlenog(strani ključ)
-		kvantitet
 		cena prodaje
 		vreme prodaje
 	4. nabavka
 		id nabavke (primarni ključ)
-		id pića (strani ključ)
 		id zaposlenog (strani ključ)
-		kvantitet
 		cena nabavke
 		datum nabavke
 	5. dnevni profit
