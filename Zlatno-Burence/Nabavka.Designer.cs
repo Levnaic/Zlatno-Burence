@@ -33,6 +33,7 @@
             this.prodajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.magacinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOcisti = new System.Windows.Forms.Button();
             this.btnUnesi = new System.Windows.Forms.Button();
             this.txtCaj = new System.Windows.Forms.TextBox();
@@ -111,7 +112,8 @@
             this.nabavkaToolStripMenuItem,
             this.prodajaToolStripMenuItem,
             this.zaposleniToolStripMenuItem,
-            this.picaToolStripMenuItem});
+            this.picaToolStripMenuItem,
+            this.magacinToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -145,6 +147,13 @@
             this.picaToolStripMenuItem.Text = "Pica";
             this.picaToolStripMenuItem.Click += new System.EventHandler(this.picaToolStripMenuItem_Click);
             // 
+            // magacinToolStripMenuItem
+            // 
+            this.magacinToolStripMenuItem.Name = "magacinToolStripMenuItem";
+            this.magacinToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.magacinToolStripMenuItem.Text = "Magacin";
+            this.magacinToolStripMenuItem.Click += new System.EventHandler(this.magacinToolStripMenuItem_Click);
+            // 
             // btnOcisti
             // 
             this.btnOcisti.Location = new System.Drawing.Point(390, 557);
@@ -153,6 +162,7 @@
             this.btnOcisti.TabIndex = 161;
             this.btnOcisti.Text = "Očisti Unos";
             this.btnOcisti.UseVisualStyleBackColor = true;
+            this.btnOcisti.Click += new System.EventHandler(this.btnOcisti_Click);
             // 
             // btnUnesi
             // 
@@ -856,5 +866,6 @@
         private TextBox txtPivoJelen033;
         private ComboBox cmbZaposleni;
         private Label label3;
+        private ToolStripMenuItem magacinToolStripMenuItem;
     }
 }

@@ -32,6 +32,7 @@
             this.nabavkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prodajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -112,7 +113,7 @@
             this.txtNegaziranaVoda = new System.Windows.Forms.TextBox();
             this.btnUnesi = new System.Windows.Forms.Button();
             this.btnOcisti = new System.Windows.Forms.Button();
-            this.picaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.magacinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +124,8 @@
             this.nabavkaToolStripMenuItem,
             this.prodajaToolStripMenuItem,
             this.zaposleniToolStripMenuItem,
-            this.picaToolStripMenuItem});
+            this.picaToolStripMenuItem,
+            this.magacinToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(785, 24);
@@ -149,6 +151,13 @@
             this.zaposleniToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.zaposleniToolStripMenuItem.Text = "Zaposleni";
             this.zaposleniToolStripMenuItem.Click += new System.EventHandler(this.zaposleniToolStripMenuItem_Click);
+            // 
+            // picaToolStripMenuItem
+            // 
+            this.picaToolStripMenuItem.Name = "picaToolStripMenuItem";
+            this.picaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.picaToolStripMenuItem.Text = "Pica";
+            this.picaToolStripMenuItem.Click += new System.EventHandler(this.picaToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -792,12 +801,12 @@
             this.btnOcisti.Text = "Očisti Unos";
             this.btnOcisti.UseVisualStyleBackColor = true;
             // 
-            // picaToolStripMenuItem
+            // magacinToolStripMenuItem
             // 
-            this.picaToolStripMenuItem.Name = "picaToolStripMenuItem";
-            this.picaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.picaToolStripMenuItem.Text = "Pica";
-            this.picaToolStripMenuItem.Click += new System.EventHandler(this.picaToolStripMenuItem_Click);
+            this.magacinToolStripMenuItem.Name = "magacinToolStripMenuItem";
+            this.magacinToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.magacinToolStripMenuItem.Text = "Magacin";
+            this.magacinToolStripMenuItem.Click += new System.EventHandler(this.magacinToolStripMenuItem_Click);
             // 
             // Prodaja
             // 
@@ -985,5 +994,6 @@
         private Button btnUnesi;
         private Button btnOcisti;
         private ToolStripMenuItem picaToolStripMenuItem;
+        private ToolStripMenuItem magacinToolStripMenuItem;
     }
 }

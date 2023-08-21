@@ -30,11 +30,18 @@ namespace Zlatno_Burence
             frmPica.Show();
         }
 
+        private void magacinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Magacin frmMagacin = new Magacin();
+            frmMagacin.Show();
+        }
+
         private void Prodaja_Load(object sender, EventArgs e)
         {
 
         }
 
-        
+       
     }
 }

@@ -93,6 +93,13 @@ namespace Zlatno_Burence
             frmPica.Show();
         }
 
+        private void magacinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Magacin frmMagacin = new Magacin();
+            frmMagacin.Show();
+        }
+
         //-funkcije za dugmad
         private void dodajZapBtn_Click(object sender, EventArgs e)
         {

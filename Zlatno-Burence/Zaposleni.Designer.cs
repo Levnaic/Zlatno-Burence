@@ -41,6 +41,7 @@
             this.ZaposleniDg = new System.Windows.Forms.DataGridView();
             this.obrisiBtn = new System.Windows.Forms.Button();
             this.azurirajBtn = new System.Windows.Forms.Button();
+            this.magacinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniDg)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,8 @@
             this.nabavkaToolStripMenuItem,
             this.prodajaToolStripMenuItem,
             this.zaposleniToolStripMenuItem,
-            this.pićaToolStripMenuItem});
+            this.pićaToolStripMenuItem,
+            this.magacinToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -160,6 +162,13 @@
             this.azurirajBtn.UseVisualStyleBackColor = true;
             this.azurirajBtn.Click += new System.EventHandler(this.azurirajBtn_Click);
             // 
+            // magacinToolStripMenuItem
+            // 
+            this.magacinToolStripMenuItem.Name = "magacinToolStripMenuItem";
+            this.magacinToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.magacinToolStripMenuItem.Text = "Magacin";
+            this.magacinToolStripMenuItem.Click += new System.EventHandler(this.magacinToolStripMenuItem_Click);
+            // 
             // Zaposleni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -203,5 +212,6 @@
         private Button obrisiBtn;
         private Button azurirajBtn;
         private ToolStripMenuItem pićaToolStripMenuItem;
+        private ToolStripMenuItem magacinToolStripMenuItem;
     }
 }

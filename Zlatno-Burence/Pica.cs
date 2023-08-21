@@ -33,6 +33,8 @@ namespace Zlatno_Burence
 
         }
 
+        //FUNKCIJE
+
         private void prikaziPiceTxt() 
         {
             int idSelektovanog = (int)dgPica.SelectedRows[0].Cells["ID"].Value;
@@ -96,6 +98,13 @@ namespace Zlatno_Burence
             frmProdaja.Show();
         }
 
+        private void magacinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Magacin frmMagacin = new Magacin();
+            frmMagacin.Show();
+        }
+
         //-funkcije za dugmad
         private void btnDodajPice_Click(object sender, EventArgs e)
         {
@@ -132,16 +141,6 @@ namespace Zlatno_Burence
            
         }
 
-        //-funkcija za dg
-        private void dgPica_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgPica.CurrentRow != null)
-            {
-                dgPica.Rows[dgPica.CurrentRow.Index].Selected = true;
-                prikaziPiceTxt();
-            }
-        }
-
         private void btnAzurirajPice_Click(object sender, EventArgs e)
         {
             if (dgPica.SelectedRows.Count > 0)
@@ -165,5 +164,19 @@ namespace Zlatno_Burence
                 MessageBox.Show("Nema podataka ili ni jedan red nije odabran!");
             }
         }
+
+        //-funkcija za dg
+        private void dgPica_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgPica.CurrentRow != null)
+            {
+                dgPica.Rows[dgPica.CurrentRow.Index].Selected = true;
+                prikaziPiceTxt();
+            }
+        }
+
+        
+
+        
     }
 }

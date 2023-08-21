@@ -52,6 +52,41 @@ namespace Zlatno_Burence
         private int domaca_kolicina;
         private int caj_kolicina;
 
+        //-promenjive dodati
+        private int vinoBelo_dodati;
+        private int vinoCrveno_dodati;
+        private int pivoJelen05_dodati;
+        private int pivoJelen033_dodati;
+        private int jelenToceno_dodati;
+        private int jelenGrejp_dodati;
+        private int staropramen_dodati;
+        private int niksickoPivo_dodati;
+        private int niksickoTamno_dodati;
+        private int stella_dodati;
+        private int bavarija05_dodati;
+        private int bavarija025_dodati;
+        private int guarana_dodati;
+        private int cola_dodati;
+        private int sveps_dodati;
+        private int ledeniCaj_dodati;
+        private int cedevita_dodati;
+        private int negaziranaVoda_dodati;
+        private int knjaz_dodati;
+        private int jeger_dodati;
+        private int keglovic_dodati;
+        private int gorkiList_dodati;
+        private int rakijaKajsija_dodati;
+        private int rakijaDunja_dodati;
+        private int vinjak_dodati;
+        private int mentol_dodati;
+        private int kruskovac_dodati;
+        private int vodka_dodati;
+        private int kupinovoVino_dodati;
+        private int espresso_dodati;
+        private int nes_dodati;
+        private int domaca_dodati;
+        private int caj_dodati;
+
         //geteri i seteri
         public int ID
         {

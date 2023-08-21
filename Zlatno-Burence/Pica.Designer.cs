@@ -43,6 +43,7 @@
             this.zaposleniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pićaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgPica = new System.Windows.Forms.DataGridView();
+            this.magacinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPica)).BeginInit();
             this.SuspendLayout();
@@ -133,7 +134,8 @@
             this.nabavkaToolStripMenuItem,
             this.prodajaToolStripMenuItem,
             this.zaposleniToolStripMenuItem,
-            this.pićaToolStripMenuItem});
+            this.pićaToolStripMenuItem,
+            this.magacinToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -177,6 +179,13 @@
             this.dgPica.Size = new System.Drawing.Size(427, 426);
             this.dgPica.TabIndex = 21;
             this.dgPica.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPica_CellClick);
+            // 
+            // magacinToolStripMenuItem
+            // 
+            this.magacinToolStripMenuItem.Name = "magacinToolStripMenuItem";
+            this.magacinToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.magacinToolStripMenuItem.Text = "Magacin";
+            this.magacinToolStripMenuItem.Click += new System.EventHandler(this.magacinToolStripMenuItem_Click);
             // 
             // Pica
             // 
@@ -224,5 +233,6 @@
         private ToolStripMenuItem zaposleniToolStripMenuItem;
         private ToolStripMenuItem pićaToolStripMenuItem;
         private DataGridView dgPica;
+        private ToolStripMenuItem magacinToolStripMenuItem;
     }
 }
