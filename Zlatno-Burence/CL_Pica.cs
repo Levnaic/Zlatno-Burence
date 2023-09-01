@@ -13,7 +13,6 @@ namespace Zlatno_Burence
         private int id;
         private string ime;
         private int cena;
-        private int naStanju;
 
         //geteri i seteri
         public int ID 
@@ -48,7 +47,7 @@ namespace Zlatno_Burence
         //funkcije za manipulisanje bazom
         public void dodajPice()
         {
-            string insertSql = "INSERT INTO Pica " + "(ImePica, CenaPica, NaStanju) VALUES" + "(@Ime, @Cena, @NaStanju)";
+            string insertSql = "INSERT INTO Pica " + "(ImePica, CenaPica) VALUES" + "(@Ime, @Cena)";
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 SqlCommand command = connection.CreateCommand();
@@ -62,7 +61,7 @@ namespace Zlatno_Burence
 
         public void azurirajPica()
         {
-            string updateSql = "UPDATE Pica " + "SET ImePica= @Ime, CenaPica=@Cena, NaStanju= @NaStanju " + "WHERE Id = @Id;";
+            string updateSql = "UPDATE Pica " + "SET ImePica= @Ime, CenaPica=@Cena " + "WHERE Id = @Id;";
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 SqlCommand command = connection.CreateCommand();

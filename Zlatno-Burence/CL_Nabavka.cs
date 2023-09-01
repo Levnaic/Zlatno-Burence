@@ -12,7 +12,6 @@ namespace Zlatno_Burence
     {
         //Promenjive
         private int id;
-        private int idPica;
         private int idZaposlenog;
         private int naStanju;
         private int datum;
@@ -94,44 +93,38 @@ namespace Zlatno_Burence
             set { id = value; }
         }
 
-        public int NaStanju
-        {
-            get { return naStanju; }
-            set
-            {
-                if (value < 0) throw new Exception("Ne može na stanju biti manje od 0 artikala!");
-                naStanju = value;
-            }
-        }
-
         //konekcioni string
         private string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\L\\Desktop\\faks\\si1\\semianrski\\Zlatno-Burence\\ZlatnoBurence.mdf;Integrated Security=True";
         
         //Funkcioje
         //-funkcije za manipulisanje bazom
-        public void azurirajNaStanjuPica()
+        public void azurirajNaStanjuPica(int[] picaKolicina)
         {
+            int brojac = 0;
             using (SqlConnection connection = new SqlConnection(_connectionString)) 
             {
                 connection.Open();
-                string selectQuery = "SELECT * FROM Pica";
+                string selectQuery = "SELECT * FROM Magacin";
                  using (SqlCommand selectCommand = new SqlCommand(selectQuery, connection))
                 {
                    DataTable dataTable = new DataTable();
 
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(selectCommand)) 
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(selectCommand))
                     {
                         adapter.Fill(dataTable);
                     }
 
+                   
                     foreach (DataRow row in dataTable.Rows) 
                     {
                         int trenutnaVrednost = Convert.ToInt32(row["NaStanju"]);
-                        int novaVrednost = trenutnaVrednost + 100;
-                        row["NaStanju"] = novaVrednost; 
+                        int novaVrednost = trenutnaVrednost + picaKolicina[brojac];
+                        row["NaStanju"] = novaVrednost;
+                        brojac++;
                     }
+                   
 
-                    string updateQuery = "UPDATE Pica SET NaStanju= @NovaVrednost WHERE Id = @Id;";
+                    string updateQuery = "UPDATE Magacin SET NaStanju= @NovaVrednost WHERE Id = @Id;";
                     foreach (DataRow row in dataTable.Rows) 
                     {
                         using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection)) 
